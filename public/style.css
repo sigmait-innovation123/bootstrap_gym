@@ -1,0 +1,19 @@
+.rto:hover{
+    transform: scale(1.1);
+    
+}
+.rto{
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+
+.spec-marq p span:hover{
+    color: greenyellow;
+
+}
+
+
+.spec-marq p span{
+    cursor: pointer;
+    transition: all 200ms ease;
+}

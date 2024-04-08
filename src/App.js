@@ -1,25 +1,39 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/header';
+import Herosec from './components/herosec';
+import Cardsec from './components/cardsec';
+import Aboutpage from './components/aboutpage';
+import Contactus from './components/contactus';
+import Footer from './components/footer';
+import { createContext } from 'react';
+
+
+
+const data = createContext()
+const data2 = createContext()
 
 function App() {
+//create context, provider, usecontext.
+  
+
+  const name = "roshan";
+ const lastname = "tambe" 
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <data.Provider value={name} >
+      <Header/>
+      <Herosec/>
+      <Cardsec/>
+      <Aboutpage/>
+      <Contactus/>
+      <Footer/>
+      </data.Provider>
+      
     </div>
   );
 }
 
 export default App;
+
+export {data}
